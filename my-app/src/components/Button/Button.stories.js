@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Button from "./Button";
+import Button from "./Button.js";
 
 storiesOf("Button", module) //names the storybook library
 	//PRIMARY
@@ -102,4 +102,7 @@ storiesOf("Button", module) //names the storybook library
 	))
 	.add("Large Default Light", () => (
 		<Button label='Large Default Light' type='default' light large />
+	))
+	.add("Cart Primary Light", () => (
+		<Button label='Cart Primary Light' type='primary' light cart />
 	));

@@ -28,6 +28,16 @@ button {
 	background-color: rgba(51, 160, 255, 0.1);
 	border: none;
 }
+.button-primary-cart {
+	position: relative;
+	padding: 0 15px;
+}
+.button-primary-cart img {
+	position: absolute;
+}
+.button-primary-cart span {
+	padding-left: 22px;
+}
 .button-danger,
 .button-danger-hover,
 .button-danger-light {

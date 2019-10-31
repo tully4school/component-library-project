@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.css";
+import cartBlue from "../../../images/cart-blue.svg";
 
 // This is a functional component - just sent up a little differently as an arrow function!
 
@@ -21,7 +22,17 @@ const Button = props => {
 	if (props.light) {
 		classList += ` button-${props.type}-light`;
 	}
-
+	if (props.cart) {
+		classList += ` button-${props.type}-cart`;
+	}
+	if (props.cart) {
+		return (
+			<button className={classList} onClick={props.onClick}>
+				<img src={cartBlue} />
+				<span>Add To Cart</span>
+			</button>
+		);
+	}
 	return (
 		<button className={classList} onClick={props.onClick}>
 			Do Something
