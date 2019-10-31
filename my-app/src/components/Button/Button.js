@@ -28,7 +28,7 @@ const Button = props => {
 	if (props.cart) {
 		return (
 			<button className={classList} onClick={props.onClick}>
-				<img src={cartBlue} />
+				<img src={cartBlue} alt='cart' />
 				<span>Add To Cart</span>
 			</button>
 		);
