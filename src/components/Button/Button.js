@@ -1,6 +1,8 @@
 import React from "react";
 import "./Button.css";
 import cartBlue from "../../../images/cart-blue.svg";
+import cartRed from "../../../images/cart-red.svg";
+import heart from "../../../images/hearts.svg";
 
 // This is a functional component - just sent up a little differently as an arrow function!
 
@@ -28,6 +30,31 @@ const Button = props => {
 			<button className={classList} onClick={props.onClick}>
 				<img src={cartBlue} alt='cart' />
 				<span>Add To Cart</span>
+			</button>
+		);
+	}
+	if (props.favorites) {
+		classList += ` button-${props.type}-favorites`;
+		return (
+			<button className={classList} onClick={props.onClick}>
+				<img src={heart} alt='heart' />
+				<span>Add To Favorites</span>
+			</button>
+		);
+	}
+	if (props.sm) {
+		classList += ` button-${props.type}-fav-sm`;
+		return (
+			<button className={classList} onClick={props.onClick}>
+				<img src={heart} alt='heart' />
+			</button>
+		);
+	}
+	if (props.cartsm) {
+		classList += ` button-${props.type}-red-sm`;
+		return (
+			<button className={classList} onClick={props.onClick}>
+				<img src={cartRed} alt='redCart' />
 			</button>
 		);
 	}

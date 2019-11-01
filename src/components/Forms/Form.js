@@ -1,11 +1,12 @@
 import React from "react";
 import "./Form.css";
+import arrowDown from "../../../images/arrowdown.svg";
 
 const Form = props => {
 	let classList = "";
 	let types = ["input", "select", "textButton", "checkbox"];
 	if (types.includes(props.type)) {
-		classList += ` form-${props.type}`;
+		classList += `form-${props.type}`;
 		console.log(props.type);
 	}
 	if (props.small) {
@@ -16,6 +17,12 @@ const Form = props => {
 	}
 	if (props.large) {
 		classList += ` form-${props.type}-lg`;
+	}
+	if (props.shaded) {
+		classList += ` form-${props.type}-shaded`;
+	}
+	if (props.inputButton) {
+		classList += ` form-${props.type}-button`;
 	}
 	if (props.input) {
 		return (
@@ -39,7 +46,7 @@ const Form = props => {
 			<div className='form'>
 				<select
 					className={classList}
-					name={props.name}
+					type={props.type}
 					value={props.value}
 					onChange={props.handleChange}
 				>
@@ -50,10 +57,38 @@ const Form = props => {
 								{option}
 							</option>
 						); */}
-					})}
 				</select>
 			</div>
 		);
 	}
+	// if (props.checkbox) {
+	// 	return class Checkbox extends React.Component {
+	// 		state = {
+	// 			checked: false
+	// 		};
+	// 		handleCheckboxChange = event =>
+	// 			this.setState({ checked: event.target.checked });
+	// 		render() {
+	// 			return (
+	// 				<div>
+	// 					<label>
+	// 						<Checkbox
+	// 							checked={this.state.checked}
+	// 							onChange={this.handleCheckboxChange}
+	// 						/>
+	// 					</label>
+	// 				</div>
+	// 			);
+	// 		}
+	// 	};
+	// }
+	// if (props.inputButton) {
+	// 	return (
+	// 		<form>
+	// 			<input className={classList} />
+	// 			<button className='button-primary'>Voucher</button>
+	// 		</form>
+	// 	);
+	// }
 };
 export default Form;

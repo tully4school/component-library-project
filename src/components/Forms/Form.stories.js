@@ -42,7 +42,7 @@ storiesOf("Form", module)
 	.add("Small Select", () => (
 		<Form
 			title='select'
-			name='select'
+			type='select'
 			placeholder='Select'
 			// options={this.state.options}
 			// value={this.state.options}
@@ -54,7 +54,7 @@ storiesOf("Form", module)
 	.add("Medium Select", () => (
 		<Form
 			title='select'
-			name='select'
+			type='select'
 			placeholder='Select'
 			// options={this.state.options}
 			// value={this.state.options}
@@ -66,7 +66,7 @@ storiesOf("Form", module)
 	.add("Large Select", () => (
 		<Form
 			title='select'
-			name='select'
+			type='select'
 			placeholder='Select'
 			// options={this.state.options}
 			// value={this.state.options}
@@ -74,4 +74,58 @@ storiesOf("Form", module)
 			select
 			large
 		/>
+	))
+	.add("Small Select Shaded", () => (
+		<Form
+			title='select'
+			type='select'
+			placeholder='Select'
+			// options={this.state.options}
+			// value={this.state.options}
+			// handleChange={this.handleInput}
+			select
+			small
+			shaded
+		/>
+	))
+	.add("Medium Select Shaded", () => (
+		<Form
+			title='select'
+			type='select'
+			placeholder='Select'
+			// options={this.state.options}
+			// value={this.state.options}
+			// handleChange={this.handleInput}
+			select
+			medium
+			shaded
+		/>
+	))
+	.add("Large Select Shaded", () => (
+		<Form
+			title='select'
+			type='select'
+			placeholder='Select'
+			// options={this.state.options}
+			// value={this.state.options}
+			// handleChange={this.handleInput}
+			select
+			large
+			shaded
+		/>
 	));
+// .add("Small Input With Button", () => (
+// 	<Form
+// 		title='Email'
+// 		email='Email'
+// 		type='input'
+// 		// value={this.state.input}
+// 		// handleChange={this.handleInput}
+// 		placeholder='Email'
+// 		inputButton
+// 		small
+// 	/>
+// ));
+// .add("Checkbox", () => (
+// 	<Form checked={this.state.checked} onChange={this.handleCheckboxChange} />
+// ));

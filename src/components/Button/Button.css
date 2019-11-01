@@ -28,6 +28,9 @@ button {
 	background-color: rgba(51, 160, 255, 0.1);
 	border: none;
 }
+.button-primary-light:hover {
+	border: none;
+}
 .button-primary-cart {
 	position: relative;
 	padding: 0 15px;
@@ -37,6 +40,33 @@ button {
 }
 .button-primary-cart span {
 	padding-left: 22px;
+}
+.button-primary-favorites {
+	width: 181px;
+	position: relative;
+}
+.button-primary-favorites:hover {
+	border: none;
+}
+.button-primary-favorites img {
+	position: absolute;
+	left: 20px;
+	top: 16px;
+}
+.button-primary-favorites span {
+	padding-left: 20px;
+}
+.button-primary-fav-sm {
+	display: flex;
+	justify-content: center;
+	width: 46px;
+	height: 46px;
+}
+.button-primary-red-sm {
+	display: flex;
+	justify-content: center;
+	width: 46px;
+	height: 46px;
 }
 .button-danger,
 .button-danger-hover,

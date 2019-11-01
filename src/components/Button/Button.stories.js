@@ -105,4 +105,13 @@ storiesOf("Button", module) //names the storybook library
 	))
 	.add("Cart Primary Light", () => (
 		<Button label='Cart Primary Light' type='primary' light cart />
+	))
+	.add("Add To Favorites", () => (
+		<Button label='Add To Favorites Light' type='primary' light favorites />
+	))
+	.add("Add To Favorites Small", () => (
+		<Button label='Add To Favorites Light Small' type='primary' light sm />
+	))
+	.add("Cart Primary Red Small", () => (
+		<Button label='Cart Primary Red Small' type='primary' light cartsm />
 	));

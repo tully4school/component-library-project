@@ -3,7 +3,8 @@
 	display: flex;
 	margin-bottom: 3px;
 }
-.form-input {
+.form-input,
+.form-inputButton {
 	border: 2px solid #f1f3f4;
 	border-radius: 4px;
 	padding: 0 15px;
@@ -24,4 +25,35 @@
 .form-input-lg {
 	height: 60px;
 	font-size: 16px;
+}
+.form-select {
+	-moz-appearance: none;
+	border: 2px solid #f1f3f4;
+	width: 300px;
+	border-radius: 4px;
+	padding: 0 15px;
+	background-image: url(../../../images/arrowdown.svg);
+	background-repeat: no-repeat;
+	background-position: 93%;
+}
+.form-select-shaded {
+	background-color: rgba(250, 250, 251, 0.9);
+	border: none;
+}
+.form-select-sm {
+	height: 38px;
+	width: 200px;
+}
+.form-select-md {
+	height: 46px;
+	font-size: 14px;
+}
+.form-select-lg {
+	height: 60px;
+	font-size: 16px;
+}
+.form-input-button {
+	height: 44px;
+	width: 109px;
+	border-right: none;
 }
