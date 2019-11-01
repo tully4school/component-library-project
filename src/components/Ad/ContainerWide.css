@@ -1,0 +1,21 @@
+.container-wide {
+	display: flex;
+	width: 570px;
+	height: 224px;
+	border: 2px solid #f6f7f8;
+	align-items: center;
+	border-radius: 4px;
+}
+.container-wide:hover {
+	background-color: #fafafb;
+	border: 2px solid #fafafb;
+}
+.image {
+	margin-left: 30px;
+}
+.name {
+	font-size: 18px;
+}
+.right-side {
+	margin-left: 30px;
+}

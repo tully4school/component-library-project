@@ -12,37 +12,22 @@ class AdWide extends React.Component {
 		super(props);
 		this.state = {};
 	}
-	getInitialState() {
-		return {
-			isMouseInside: false
-		};
-	}
-	mouseEnter = () => {
-		this.setState({ isMouseInside: true });
-	};
-	mouseLeave = () => {
-		this.setState({ isMouseInside: false });
-	};
 	render() {
 		return (
-			<div
-				className='container-wide'
-				onMouseEnter={this.mouseEnter}
-				onMouseLeave={this.mouseLeave}
-			>
-				{this.state.isMouseInside ? <ThumbnailHover /> : null}
+			<div className='container-wide'>
 				<div class='image'>
 					<ComputerImg />
 				</div>
-				<hr />
-				<div class='name'>
-					<ProductName />
-				</div>
-				<div>
-					<Ratings />
-				</div>
-				<div>
-					<Prices />
+				<div class='right-side'>
+					<div class='name'>
+						<ProductName />
+					</div>
+					<div>
+						<Ratings />
+					</div>
+					<div>
+						<Prices />
+					</div>
 				</div>
 			</div>
 		);
