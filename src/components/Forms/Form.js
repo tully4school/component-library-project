@@ -1,6 +1,5 @@
 import React from "react";
 import "./Form.css";
-import { format } from "path";
 
 const Form = props => {
 	let classList = "";
@@ -18,19 +17,43 @@ const Form = props => {
 	if (props.large) {
 		classList += ` form-${props.type}-lg`;
 	}
-	return (
-		<div className='form'>
-			<label htmlFor={props.name} className='form-label'>
-				{props.title}
-			</label>
-			<input
-				name={props.email}
-				type={props.type}
-				value={props.value}
-				onchange={props.handleChange}
-				placeholder={props.placeholder}
-			/>
-		</div>
-	);
+	if (props.input) {
+		return (
+			<div className='form'>
+				<label htmlFor={props.name} className='form-label'>
+					{props.title}
+				</label>
+				<input
+					className={classList}
+					name={props.email}
+					type={props.type}
+					value={props.value}
+					onchange={props.handleChange}
+					placeholder={props.placeholder}
+				/>
+			</div>
+		);
+	}
+	if (props.select) {
+		return (
+			<div className='form'>
+				<select
+					className={classList}
+					name={props.name}
+					value={props.value}
+					onChange={props.handleChange}
+				>
+					<option value=''>{props.placeholder}</option>
+					{/* {props.options.map(option => {
+						return (
+							<option key={option} value={option} label='option'>
+								{option}
+							</option>
+						); */}
+					})}
+				</select>
+			</div>
+		);
+	}
 };
 export default Form;

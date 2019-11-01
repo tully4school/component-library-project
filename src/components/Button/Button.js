@@ -24,8 +24,6 @@ const Button = props => {
 	}
 	if (props.cart) {
 		classList += ` button-${props.type}-cart`;
-	}
-	if (props.cart) {
 		return (
 			<button className={classList} onClick={props.onClick}>
 				<img src={cartBlue} alt='cart' />
@@ -33,6 +31,7 @@ const Button = props => {
 			</button>
 		);
 	}
+
 	return (
 		<button className={classList} onClick={props.onClick}>
 			Do Something
