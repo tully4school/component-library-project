@@ -113,19 +113,31 @@ storiesOf("Form", module)
 			large
 			shaded
 		/>
+	))
+	.add("Small Input With Button", () => (
+		<Form
+			title='Voucher'
+			email='Email'
+			type='input'
+			// value={this.state.input}
+			// handleChange={this.handleInput}
+			placeholder='Voucher Code'
+			inputButton
+			small
+		/>
+	))
+	.add("Large Input With Button", () => (
+		<Form
+			title='Voucher'
+			email='Email'
+			type='input'
+			// value={this.state.input}
+			// handleChange={this.handleInput}
+			placeholder='Voucher Code'
+			inputButtonLg
+			large
+		/>
 	));
-// .add("Small Input With Button", () => (
-// 	<Form
-// 		title='Email'
-// 		email='Email'
-// 		type='input'
-// 		// value={this.state.input}
-// 		// handleChange={this.handleInput}
-// 		placeholder='Email'
-// 		inputButton
-// 		small
-// 	/>
-// ));
 // .add("Checkbox", () => (
 // 	<Form checked={this.state.checked} onChange={this.handleCheckboxChange} />
 // ));

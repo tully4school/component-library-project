@@ -5,7 +5,6 @@ import ComputerImg from "./Images/ComputerImage.js";
 import ProductName from "./ProductName.js";
 import Ratings from "./Images/Ratings.js";
 import Prices from "./Price.js";
-import ThumbnailHover from "./ThumbnailHover";
 
 class AdWide extends React.Component {
 	constructor(props) {
@@ -15,11 +14,11 @@ class AdWide extends React.Component {
 	render() {
 		return (
 			<div className='container-wide'>
-				<div class='image'>
+				<div class='image-wide'>
 					<ComputerImg />
 				</div>
 				<div class='right-side'>
-					<div class='name'>
+					<div class='name-wide'>
 						<ProductName />
 					</div>
 					<div>

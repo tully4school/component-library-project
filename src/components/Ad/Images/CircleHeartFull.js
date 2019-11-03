@@ -16,3 +16,4 @@ class CircleHeartImageFull extends Component {
 }
 
 export default CircleHeartImageFull;
+//import as svg!!!!

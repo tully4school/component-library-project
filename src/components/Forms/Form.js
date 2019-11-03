@@ -24,6 +24,9 @@ const Form = props => {
 	if (props.inputButton) {
 		classList += ` form-${props.type}-button`;
 	}
+	if (props.inputButtonLg) {
+		classList += ` form-${props.type}-button`;
+	}
 	if (props.input) {
 		return (
 			<div className='form'>
@@ -51,44 +54,27 @@ const Form = props => {
 					onChange={props.handleChange}
 				>
 					<option value=''>{props.placeholder}</option>
-					{/* {props.options.map(option => {
-						return (
-							<option key={option} value={option} label='option'>
-								{option}
-							</option>
-						); */}
 				</select>
 			</div>
 		);
 	}
-	// if (props.checkbox) {
-	// 	return class Checkbox extends React.Component {
-	// 		state = {
-	// 			checked: false
-	// 		};
-	// 		handleCheckboxChange = event =>
-	// 			this.setState({ checked: event.target.checked });
-	// 		render() {
-	// 			return (
-	// 				<div>
-	// 					<label>
-	// 						<Checkbox
-	// 							checked={this.state.checked}
-	// 							onChange={this.handleCheckboxChange}
-	// 						/>
-	// 					</label>
-	// 				</div>
-	// 			);
-	// 		}
-	// 	};
-	// }
-	// if (props.inputButton) {
-	// 	return (
-	// 		<form>
-	// 			<input className={classList} />
-	// 			<button className='button-primary'>Voucher</button>
-	// 		</form>
-	// 	);
-	// }
+	if (props.inputButton) {
+		return (
+			<form className='input-button'>
+				<input className={classList} placeholder={props.placeholder} />
+				<button className='button-primary'>Redeem</button>
+			</form>
+		);
+	}
+	if (props.inputButtonLg) {
+		return (
+			<form className='input-button-lg'>
+				<input className={classList} placeholder={props.placeholder} />
+				<button className='button-primary button-large button-large-form'>
+					Redeem
+				</button>
+			</form>
+		);
+	}
 };
 export default Form;

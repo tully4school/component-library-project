@@ -1,8 +1,9 @@
 import React from "react";
 import "./Counter.css";
-class App extends Component {
-	constructor() {
-		super();
+import CounterAdd from "./CounterAdd.js";
+class Counter extends React.Component {
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			count: 0
@@ -21,12 +22,15 @@ class App extends Component {
 		});
 	};
 	render() {
-		console.log(this.state);
 		return (
-			<div className='App'>
-				<h1>count: {this.state.count}</h1>
-				<button onClick={this.increaseCount}>+</button>
-				<button onClick={this.decreaseCount}>-</button>
+			<div className='counter'>
+				<button class='counter-button' onClick={this.increaseCount}>
+					+
+				</button>
+				<p>{this.state.count}</p>
+				<button class='counter-button' onClick={this.decreaseCount}>
+					-
+				</button>
 			</div>
 		);
 	}

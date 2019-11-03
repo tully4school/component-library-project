@@ -54,6 +54,21 @@
 }
 .form-input-button {
 	height: 44px;
-	width: 109px;
+	width: 152px;
 	border-right: none;
+	border-radius: 4px 0 0 4px;
+}
+.input-button .button-primary {
+	border-radius: 0 4px 4px 0;
+	width: 118px;
+	height: 46px;
+}
+.form-input-lg {
+	width: 251px;
+	height: 60px;
+}
+.button-large-form {
+	border-radius: 0 4px 4px 0;
+	height: 62px;
+	width: 118px;
 }
