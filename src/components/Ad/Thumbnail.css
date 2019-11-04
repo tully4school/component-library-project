@@ -47,3 +47,64 @@ hr {
 	color: #c1c8ce;
 	text-decoration: line-through;
 }
+.inline {
+	display: flex;
+}
+.inline-left {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	border: 3px solid #f6f7f8;
+	padding: 0 30px;
+	border-radius: 3px;
+}
+.inline-left .computer-img {
+	margin-top: 0;
+}
+.line1 .Product {
+	font-size: 24px;
+}
+.line2 {
+	display: inline-flex;
+}
+.line2 .rating-img {
+	margin: 0;
+	padding-bottom: 6px;
+}
+.reviews {
+	padding: 0 25px;
+	margin: 0;
+	color: #c1c8ce;
+	font-size: 14px;
+}
+.inline-right hr {
+	width: 470px;
+	margin-top: 15px;
+}
+.line2 a {
+	text-decoration: none;
+	color: #33a0ff;
+	font-size: 14px;
+}
+.line3 .prices .price {
+	font-size: 20px;
+}
+.line3 p {
+	margin: 12px 0;
+}
+.line4 {
+	width: 570px;
+	height: 71px;
+}
+.line4 p {
+	margin: 0;
+	line-height: 24px;
+}
+.line5 {
+	display: inline-flex;
+	margin-top: 20px;
+	color: #262626;
+}
+.line5 .button-primary-cart {
+	margin-right: 15px;
+}
