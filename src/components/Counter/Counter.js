@@ -1,19 +1,29 @@
 import React from "react";
 import "./Counter.css";
 import CounterAdd from "./CounterAdd.js";
+
 class Counter extends React.Component {
 	constructor(props) {
 		super(props);
-
+		console.log(props);
 		this.state = {
-			count: 0
+			count: 0,
+			max: 11,
+			min: -10
 		};
 	}
 	increaseCount = () => {
-		let count = this.state.count + 1;
-		this.setState({
-			count: count
-		});
+		if (this.state.count < this.state.max) {
+			let count = this.state.count + 1;
+			this.setState({
+				count: count
+			});
+		} else {
+			let count = this.state.count + 0;
+			this.setState({
+				count: count
+			});
+		}
 	};
 	decreaseCount = () => {
 		let count = this.state.count - 1;
@@ -22,9 +32,11 @@ class Counter extends React.Component {
 		});
 	};
 	render() {
+		console.log("this is" + this.props.className);
+		console.log(this.state.max);
 		return (
 			<div className='counter'>
-				<button class='counter-button' onClick={this.increaseCount}>
+				<button class={this.props.className} onClick={this.increaseCount}>
 					+
 				</button>
 				<p>{this.state.count}</p>
