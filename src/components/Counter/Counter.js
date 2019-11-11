@@ -7,9 +7,9 @@ class Counter extends React.Component {
 		super(props);
 		console.log(props);
 		this.state = {
-			count: 0,
-			max: 11,
-			min: -10
+			count: this.props.value,
+			max: this.props.max,
+			min: this.props.min
 		};
 	}
 	increaseCount = () => {
@@ -26,10 +26,17 @@ class Counter extends React.Component {
 		}
 	};
 	decreaseCount = () => {
-		let count = this.state.count - 1;
-		this.setState({
-			count: count
-		});
+		if (this.state.count > this.state.min) {
+			let count = this.state.count - 1;
+			this.setState({
+				count: count
+			});
+		} else {
+			let count = this.state.count - 0;
+			this.setState({
+				count: count
+			});
+		}
 	};
 	render() {
 		console.log("this is" + this.props.className);

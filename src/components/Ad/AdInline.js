@@ -5,6 +5,7 @@ import ProductName from "./ProductName.js";
 import Ratings from "./Images/Ratings.js";
 import Prices from "./Price.js";
 import Button from "../Button/Button.js";
+import Hot from "./Hot";
 
 class AdInline extends React.Component {
 	constructor(props) {
@@ -14,6 +15,7 @@ class AdInline extends React.Component {
 		return (
 			<div className='inline'>
 				<div className='inline-left'>
+					<Hot />
 					<ComputerImg />
 				</div>
 				<div className='inline-right'>

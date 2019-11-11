@@ -51,6 +51,7 @@ hr {
 	display: flex;
 }
 .inline-left {
+	position: relative;
 	display: flex;
 	align-items: center;
 	margin-right: 20px;
@@ -60,6 +61,23 @@ hr {
 }
 .inline-left .computer-img {
 	margin-top: 0;
+}
+.hot {
+	display: flex;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: #ff4858;
+	color: white;
+	width: 40px;
+	height: 20px;
+	font-size: 12px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+}
+.p-hot {
+	height: 10px;
 }
 .line1 .Product {
 	font-size: 24px;
@@ -107,4 +125,21 @@ hr {
 }
 .line5 .button-primary-cart {
 	margin-right: 15px;
+}
+.ad-small {
+	display: flex;
+}
+.ad-small .inline-left {
+	padding: 0;
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+}
+.ad-small .inline-right {
+	width: 133px;
+}
+.ad-small .headphones-img {
+	position: absolute;
+	top: 5px;
+	left: 15px;
 }
