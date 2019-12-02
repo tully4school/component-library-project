@@ -1,32 +1,35 @@
 import React, { Component } from "react";
 import "./Checkbox.css";
+import blackCheck from "../../../images/checkboxempty.png";
+import blackCheckChecked from "../../../images/checkbox - checked.png";
+import blueCheck from "../../../images/checkboxblue.png";
+import blueCheckChecked from "../../../images/checkbox - checkedblue.png";
 class Checkbox extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			checked: "unchecked"
+			toggleCheck: false
 		};
-		this.handleCheckbox = this.handleCheckbox.bind(this);
+		this.handleCheck = this.handleCheck.bind(this);
 	}
-	handleCheckbox = evt => {
-		if (this.state.checked === "unchecked") {
-			this.setState({ checked: "checked" });
-		}
-		if (this.state.checked === "checked") {
-			this.setState({ checked: "unchecked" });
-		}
+	handleCheck = e => {
+		e.preventDefault();
+		this.setState({ toggleCheck: !this.state.toggleCheck }); //doing the opposite of whatever the state is
 	};
 	render() {
 		return (
-			<label className={this.state.checked + "-" + this.props.color}>
-				<input
-					type='checkbox'
-					className={this.state.checked}
-					name={this.props.name}
-					onChange={this.handleCheckbox}
-				/>
-				<span className={"check-" + this.props.color} />
-			</label>
+			<div className='checkbox' onClick={this.handleCheck}>
+				{this.state.toggleCheck ? (
+					<div className='checked'>
+						<img src={this.props.blue ? blueCheckChecked : blackCheckChecked} />
+					</div>
+				) : (
+					<div className='empty'>
+						<img src={this.props.blue ? blueCheck : blackCheck} />
+					</div>
+				)}
+				<label>{this.props.label}</label>
+			</div>
 		);
 	}
 }
