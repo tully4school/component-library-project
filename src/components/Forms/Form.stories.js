@@ -141,3 +141,8 @@ storiesOf("Form", module)
 // .add("Checkbox", () => (
 // 	<Form checked={this.state.checked} onChange={this.handleCheckboxChange} />
 // ));
+import Counter from "../Counter/Counter";
+let increaseCount;
+storiesOf("Counter", module).add("Counter Component", () => (
+	<Counter className='counter-button' value={0} min={-10} max={11} />
+));
